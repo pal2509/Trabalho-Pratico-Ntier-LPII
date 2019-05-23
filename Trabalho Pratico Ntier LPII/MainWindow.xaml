@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Guardar e Sair" HorizontalAlignment="Left" Margin="568,17,0,0" VerticalAlignment="Top" Width="151" Height="36"/>
+
 
     </Grid>
 </Window>
