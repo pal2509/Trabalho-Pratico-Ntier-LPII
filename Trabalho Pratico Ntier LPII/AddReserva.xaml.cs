@@ -10,36 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BLRestaurante;
-using BORestaurante;
-using Varios;
 
 namespace Trabalho_Pratico_Ntier_LPII
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddReserva.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddReserva : Window
     {
-        public MainWindow()
+        public AddReserva()
         {
             InitializeComponent();
         }
 
-        private void Adcli_Click(object sender, RoutedEventArgs e)
+        private void Voltar_Click(object sender, RoutedEventArgs e)
         {
-            AddCliente add = new AddCliente();
-            add.Show();
+            MainWindow main = new MainWindow();
+            main.Show();
             this.Close();
         }
 
-        private void Adres_Click(object sender, RoutedEventArgs e)
+        private void Registar_Click(object sender, RoutedEventArgs e)
         {
-            AddReserva add = new AddReserva();
-            add.Show();
-            this.Close();
+
         }
     }
 }
