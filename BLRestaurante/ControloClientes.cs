@@ -11,7 +11,11 @@ namespace BLRestaurante
 {
     public class ControloClientes
     {
-
+        /// <summary>
+        /// Adiciona um cliente ao restaurante
+        /// </summary>
+        /// <param name="c">Cliente</param>
+        /// <returns>1-Adicionou,2-já existe</returns>
         public static int AddCliente(Cliente c)
         {
             try

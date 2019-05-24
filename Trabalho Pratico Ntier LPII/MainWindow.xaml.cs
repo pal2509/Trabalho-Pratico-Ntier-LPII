@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BLRestaurante;
+using BORestaurante;
+using Varios;
 
 namespace Trabalho_Pratico_Ntier_LPII
 {
@@ -24,5 +27,14 @@ namespace Trabalho_Pratico_Ntier_LPII
         {
             InitializeComponent();
         }
+
+        private void Adcli_Click(object sender, RoutedEventArgs e)
+        {
+            AddCliente add = new AddCliente();
+            add.Show();
+            this.Close();
+        }
+
+
     }
 }

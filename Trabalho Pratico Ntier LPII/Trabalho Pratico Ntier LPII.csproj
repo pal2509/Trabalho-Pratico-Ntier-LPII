@@ -55,10 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AddCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddCliente.xaml.cs">
+      <DependentUpon>AddCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -93,6 +100,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLRestaurante\BLRestaurante.csproj">
+      <Project>{16d24456-26be-4ff7-93b7-e1e2d6a00ff3}</Project>
+      <Name>BLRestaurante</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BORestaurante\BORestaurante.csproj">
+      <Project>{25319670-3f39-4ad1-b897-b8a851148a06}</Project>
+      <Name>BORestaurante</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Varios\Varios.csproj">
+      <Project>{c49762a6-154d-4f3c-9177-fa8aa247f660}</Project>
+      <Name>Varios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

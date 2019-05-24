@@ -10,6 +10,11 @@ namespace BLRestaurante
     class ControloEmenta
     {
 
-
+        public static int AddProduto(Produto p)
+        {
+            bool x = Ementa.AddProduto(p);
+            if (x == true) return 1;
+            else return 0;
+        }
     }
 }
