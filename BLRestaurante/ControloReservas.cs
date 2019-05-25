@@ -8,7 +8,7 @@ using BDDadosRestaurante;
 
 namespace BLRestaurante
 {
-    class ControloReservas
+    public class ControloReservas
     {
 
         /// <summary>
@@ -26,6 +26,39 @@ namespace BLRestaurante
                 else return 0;
             }
             else return -1;
+        }
+
+
+        /// <summary>
+        /// Transforma 3 string em uma reservas
+        /// </summary>
+        /// <param name="telefone">string telefone</param>
+        /// <param name="npessoas">srintf numero de pessoas</param>
+        /// <param name="data">string data</param>
+        /// <param name="r">out Reserva</param>
+        /// <returns>1-Converteu,-1-telefone errado,-2-numero de pessoas errado,-3-data errada</returns>
+        public static int CriaReserva(string telefone, string npessoas, string data, out Reserva r)
+        {
+            try
+            {
+                bool y = int.TryParse(telefone, out int tel);
+                bool x = int.TryParse(npessoas, out int npes);
+                bool z = DateTime.TryParse(data, out DateTime date);
+                if (y == true && x == true && z == true)
+                {
+                    r = new Reserva(tel, npes, date);
+                    return 1;
+                }
+                else r = new Reserva();
+                if (y == false) return -1;
+                if (x == false) return -2;
+                if (z == false) return -3;
+                return 0;
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Erro: ", e);
+            }
         }
 
 

@@ -17,7 +17,6 @@ namespace BORestaurante
         int numPessoas;
         DateTime horario;
 
-
         #endregion
         #region Construtor
         /// <summary>
@@ -31,6 +30,17 @@ namespace BORestaurante
             this.tel = tel;
             numPessoas = numpes;
             horario = h;
+        }
+
+
+        /// <summary>
+        /// Construtor vazio
+        /// </summary>
+        public Reserva()
+        {
+            tel = -1;
+            numPessoa = -1;
+            horario = new DateTime(0, 0, 0);
         }
         #endregion
         #region Propriedades

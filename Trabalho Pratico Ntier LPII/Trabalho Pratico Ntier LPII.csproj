@@ -59,6 +59,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddRefei.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddReserva.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -69,6 +77,12 @@
     </Page>
     <Compile Include="AddCliente.xaml.cs">
       <DependentUpon>AddCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduto.xaml.cs">
+      <DependentUpon>AddProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddRefei.xaml.cs">
+      <DependentUpon>AddRefei.xaml</DependentUpon>
     </Compile>
     <Compile Include="AddReserva.xaml.cs">
       <DependentUpon>AddReserva.xaml</DependentUpon>

@@ -17,11 +17,11 @@ using BORestaurante;
 namespace Trabalho_Pratico_Ntier_LPII
 {
     /// <summary>
-    /// Interaction logic for AddReserva.xaml
+    /// Interaction logic for AddProduto.xaml
     /// </summary>
-    public partial class AddReserva : Window
+    public partial class AddProduto : Window
     {
-        public AddReserva()
+        public AddProduto()
         {
             InitializeComponent();
         }
@@ -37,21 +37,21 @@ namespace Trabalho_Pratico_Ntier_LPII
         {
             try
             {
-                int x = ControloReservas.CriaReserva(TelCli.Text, numpes.Text, data.Text, out Reserva r);
+                int x = ControloEmenta.CriaEmenta(cod.Text, nome.Text, preco.Text, out Produto r);
                 if (x == 1)
                 {
-                    int n = ControloReservas.AddReserva(r);
+                    int n = ControloEmenta.AddProduto(r);
                     if (n == 1) MessageBox.Show("Adicionado com sucesso");
-                    else if (n == 0) MessageBox.Show("Já existe uma reserva igual");
-                    else MessageBox.Show("Já existem muitas reservas nessa data");
+                    else MessageBox.Show("Já existe um produto igual");
+                    
                 }
-                if (x == -1) MessageBox.Show("Não é um numero de telefone!!!");
-                if (x == -2) MessageBox.Show("Não é um numero de pessoas!!!");
-                if (x == -3) MessageBox.Show("Não é uma data!!!");
+                if (x == -1) MessageBox.Show("Não é um codigo válido!!!");
+                if (x == -2) MessageBox.Show("Não é um preço válido!!!");
+                
             }
-            catch(Exception t)
+            catch (Exception t)
             {
-                MessageBox.Show(string.Format("{0}",t));
+                MessageBox.Show(string.Format("{0}", t));
             }
         }
     }

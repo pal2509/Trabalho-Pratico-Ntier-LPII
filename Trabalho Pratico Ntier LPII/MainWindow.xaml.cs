@@ -41,5 +41,19 @@ namespace Trabalho_Pratico_Ntier_LPII
             add.Show();
             this.Close();
         }
+
+        private void Adref_Click(object sender, RoutedEventArgs e)
+        {
+            AddRefei add = new AddRefei();
+            add.Show();
+            this.Close();
+        }
+
+        private void Adpro_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduto add = new AddProduto();
+            add.Show();
+            this.Close();
+        }
     }
 }

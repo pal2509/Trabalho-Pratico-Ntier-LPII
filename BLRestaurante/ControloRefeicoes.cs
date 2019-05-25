@@ -9,7 +9,7 @@ using BORestaurante;
 
 namespace BLRestaurante
 {
-    class ControloRefeicoes
+    public class ControloRefeicoes
     {
 
         public static int AddRefeicao(Refeicao r)

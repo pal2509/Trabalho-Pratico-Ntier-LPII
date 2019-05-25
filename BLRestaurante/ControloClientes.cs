@@ -66,5 +66,9 @@ namespace BLRestaurante
     
         }
 
+        public static bool ExisteCliente(int n)
+        {
+            return Clientes.ExisteCliente(n);
+        }
     }
 }

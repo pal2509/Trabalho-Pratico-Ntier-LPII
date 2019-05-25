@@ -17,6 +17,16 @@ namespace BORestaurante
         #region Construtor
 
         /// <summary>
+        /// Construtor vazio
+        /// </summary>
+        public Produto()
+        {
+            nome = "";
+            cod = -1;
+            preco = -1;
+        }
+
+        /// <summary>
         /// Construtor de um produto
         /// </summary>
         /// <param name="nome">Nome do produto</param>
