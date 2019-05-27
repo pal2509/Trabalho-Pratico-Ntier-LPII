@@ -59,7 +59,7 @@
         <Button Grid.Column="3" Grid.Row="7" FontSize="18" Background="#FFD8D8D8">
             Ver Ementa
         </Button>
-        <Button Grid.Column="3" Grid.Row="9" FontSize="18" Background="#FFD8D8D8" Click="Button_Click_1">
+        <Button Grid.Column="1" Grid.Row="9" FontSize="18" Background="#FFD8D8D8" Click="Button_Click_1">
             Guardar Dados
         </Button>
     </Grid>
