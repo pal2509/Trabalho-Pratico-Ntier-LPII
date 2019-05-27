@@ -20,6 +20,16 @@ namespace BDDadosRestaurante
             return reser;
         }
 
+        public static void GetListaReservas(List<Reserva> c)
+        {
+            reser = c;
+        }
+
+        public static string fileNameReservas()
+        {
+            return fileReservas;
+        }
+
         #region Metodos
 
         /// <summary>

@@ -38,9 +38,7 @@
         <TextBox x:Name="numcli" Grid.Column="3" Grid.Row="1" Background="#FFD8D8D8" Width="300"/>
         <Label Grid.Column="1" Grid.Row="3" Content="Codigos produtos(sem espaços)"  Width="210" Height="30"/>
         <TextBox x:Name="Codigos" Grid.Column="3" Grid.Row="3" Background="#FFD8D8D8" Width="300"/>
-        <DataGrid x:Name="ementa" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="6" Height="260" Background="White" SelectionChanged="Ementa_SelectionChanged" VerticalScrollBarVisibility="Visible" >
-           
-
+        <DataGrid x:Name="ementa" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="6" Height="260" Background="White" SelectionChanged="Ementa_SelectionChanged" VerticalScrollBarVisibility="Visible" AlternatingRowBackground="#FFD8D8D8">
 
         </DataGrid>
 

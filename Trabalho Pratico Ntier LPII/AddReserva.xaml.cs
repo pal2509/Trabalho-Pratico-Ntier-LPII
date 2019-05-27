@@ -28,6 +28,14 @@ namespace Trabalho_Pratico_Ntier_LPII
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                ControloClientes.GuardarDados();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(string.Format("{0}", t));
+            }
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();

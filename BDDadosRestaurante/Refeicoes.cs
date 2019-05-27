@@ -18,7 +18,15 @@ namespace BDDadosRestaurante
         {
             return refeicoes;
         }
+        public static void GetListaRefeicoes(List<Refeicao> c)
+        {
+            refeicoes = c;
+        }
 
+        public static string fileNameRefeicoes()
+        {
+            return fileRefeicoes;
+        }
 
         #region Metodos
         /// <summary>

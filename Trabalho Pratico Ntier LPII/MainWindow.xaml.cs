@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,14 @@ namespace Trabalho_Pratico_Ntier_LPII
         public MainWindow()
         {
             InitializeComponent();
+            try
+            {
+                ControloClientes.CarregarDados();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(string.Format("{0}", t));
+            }
         }
 
         private void Adcli_Click(object sender, RoutedEventArgs e)
@@ -54,6 +63,20 @@ namespace Trabalho_Pratico_Ntier_LPII
             AddProduto add = new AddProduto();
             add.Show();
             this.Close();
+        }
+
+
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ControloClientes.GuardarDados();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(string.Format("{0}", t));
+            }
         }
     }
 }

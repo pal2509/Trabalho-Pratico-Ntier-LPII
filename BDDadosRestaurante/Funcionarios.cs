@@ -17,6 +17,16 @@ namespace BDDadosRestaurante
             return empregados;
         }
 
+        public static void GetListaFuncionario(List<Funcionario> c)
+        {
+            empregados = c;
+        }
+
+        public static string fileNameFuncionario()
+        {
+            return fileEmpregados;
+        }
+
         #region Metodos
 
 

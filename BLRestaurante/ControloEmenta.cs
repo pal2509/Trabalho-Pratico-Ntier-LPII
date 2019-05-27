@@ -22,6 +22,15 @@ namespace BLRestaurante
             return Ementa.GetEmenta();
         }
 
+        public static bool ExisteProduto(int n)
+        {
+            foreach(Produto p in Ementa.GetEmenta())
+            {
+                if (n == p.Cod) return true;
+            }
+            return false;
+        }
+
         /// <summary>
         /// Transforma 3 string em uma reservas
         /// </summary>

@@ -24,10 +24,20 @@ namespace Trabalho_Pratico_Ntier_LPII
         public AddProduto()
         {
             InitializeComponent();
+            ementa.ItemsSource = ControloEmenta.GetEmenta();
+            
         }
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                ControloClientes.GuardarDados();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(string.Format("{0}", t));
+            }
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
@@ -53,6 +63,11 @@ namespace Trabalho_Pratico_Ntier_LPII
             {
                 MessageBox.Show(string.Format("{0}", t));
             }
+        }
+
+        private void Ementa_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
         }
     }
 }

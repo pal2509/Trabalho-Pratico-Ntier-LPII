@@ -70,5 +70,29 @@ namespace BLRestaurante
         {
             return Clientes.ExisteCliente(n);
         }
+
+        public static bool CarregarDados()
+        {
+            try
+            {
+                return Dados.Load();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public static bool GuardarDados()
+        {
+            try
+            {
+                return Dados.Guardar();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

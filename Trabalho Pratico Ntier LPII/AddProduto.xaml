@@ -44,7 +44,9 @@
 
         <Button x:Name="voltar" Content="Voltar" Grid.Column="1" Grid.Row="7" Click="Voltar_Click" Height="30" Width="200" Grid.ColumnSpan="2"/>
         <Button x:Name="Registar" Content="Registar" Grid.Column="4" Grid.Row="7" Click="Registar_Click" Height="30" Width="300"/>
-
+        <DataGrid x:Name="ementa" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="5" Grid.RowSpan="6" Height="260" Background="White" SelectionChanged="Ementa_SelectionChanged" VerticalScrollBarVisibility="Visible" AlternatingRowBackground="#FFD8D8D8" >
+         
+        </DataGrid>
 
 
     </Grid>

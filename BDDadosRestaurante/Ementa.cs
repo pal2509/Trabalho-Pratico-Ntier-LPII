@@ -21,6 +21,15 @@ namespace BDDadosRestaurante
             return ementa;
         }
 
+        public static void GetListaEmenta(List<Produto> c)
+        {
+            ementa = c;
+        }
+
+        public static string fileNameEmenta()
+        {
+            return fileEmenta;
+        }
 
         #region Metodos
         /// <summary>

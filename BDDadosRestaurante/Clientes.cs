@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,22 @@ namespace BDDadosRestaurante
 
         #region Propriedades
 
-        public static List<Cliente>GetClientes()
+        public static List<Cliente> GetClientes()
         {
             return lista;
         }
 
+        public static void GetListaClientes(List<Cliente> c)
+        {
+            lista = c;
+        }
 
+        public static string fileNameClientes()
+        {
+            return fileClientes;
+        }
+
+        
         #endregion
 
         #region Metodos
@@ -44,7 +55,7 @@ namespace BDDadosRestaurante
                 }
                 return false;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
