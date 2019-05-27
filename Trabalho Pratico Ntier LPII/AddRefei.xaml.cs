@@ -24,7 +24,7 @@ namespace Trabalho_Pratico_Ntier_LPII
         {
             InitializeComponent();
             ementa.ItemsSource = ControloEmenta.GetEmenta();
-
+            clientes.ItemsSource = ControloClientes.GetClientes();
         }
 
  

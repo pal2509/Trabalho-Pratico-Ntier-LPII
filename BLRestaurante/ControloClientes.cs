@@ -94,5 +94,11 @@ namespace BLRestaurante
                 throw e;
             }
         }
+
+        public static List<Cliente>GetClientes()
+        {
+            return Clientes.GetClientes();
+        }
+
     }
 }

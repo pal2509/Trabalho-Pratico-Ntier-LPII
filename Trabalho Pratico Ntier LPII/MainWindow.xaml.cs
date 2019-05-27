@@ -78,5 +78,10 @@ namespace Trabalho_Pratico_Ntier_LPII
                 MessageBox.Show(string.Format("{0}", t));
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
