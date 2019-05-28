@@ -79,9 +79,11 @@ namespace Trabalho_Pratico_Ntier_LPII
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Add_Func(object sender, RoutedEventArgs e)
         {
-
+            AddFuncionario add = new AddFuncionario();
+            add.Show();
+            this.Close();
         }
     }
 }

@@ -66,11 +66,24 @@ namespace BLRestaurante
     
         }
 
+
+        /// <summary>
+        /// Verifica se um cliente existe no restaurante
+        /// </summary>
+        /// <param name="n">Numero do cliente</param>
+        /// <returns></returns>
         public static bool ExisteCliente(int n)
         {
             return Clientes.ExisteCliente(n);
         }
 
+
+        #region Dados
+
+        /// <summary>
+        /// Carrega de um ficherio binario os dados do restaturante para memoria
+        /// </summary>
+        /// <returns></returns>
         public static bool CarregarDados()
         {
             try
@@ -83,6 +96,10 @@ namespace BLRestaurante
             }
         }
 
+        /// <summary>
+        /// Guarda os dados do restaturante em ficheiros
+        /// </summary>
+        /// <returns></returns>
         public static bool GuardarDados()
         {
             try
@@ -94,7 +111,12 @@ namespace BLRestaurante
                 throw e;
             }
         }
+        #endregion
 
+        /// <summary>
+        /// Lista de CLientes
+        /// </summary>
+        /// <returns></returns>
         public static List<Cliente>GetClientes()
         {
             return Clientes.GetClientes();

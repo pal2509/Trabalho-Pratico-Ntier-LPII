@@ -46,6 +46,16 @@ namespace BDDadosRestaurante
             }
             else return false;
         }
+
+        /// <summary>
+        /// Numero de produtos na ementa
+        /// </summary>
+        /// <returns></returns>
+        public static int NumeroProdutos()
+        {
+            return ementa.Count;
+        }
+
         #endregion
     }
 }

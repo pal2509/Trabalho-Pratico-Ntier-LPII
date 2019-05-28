@@ -35,9 +35,9 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <Label Grid.Column="1" Grid.Row="1" Content="Nome" Width="150" Height="25"/>
-        <TextBox x:Name="NomeCli" Grid.Column="3" Grid.Row="1" Background="#FFD8D8D8" Width="300"/>
+        <TextBox x:Name="Nome" Grid.Column="3" Grid.Row="1" Background="#FFD8D8D8" Width="300"/>
         <Label Grid.Column="1" Grid.Row="3" Content="Telefone/Telemóvel"  Width="150" Height="25"/>
-        <TextBox x:Name="TelCli" Grid.Column="3" Grid.Row="3" Background="#FFD8D8D8" Width="300"/>
+        <TextBox x:Name="Tel" Grid.Column="3" Grid.Row="3" Background="#FFD8D8D8" Width="300"/>
         <Label Grid.Column="1" Grid.Row="5" Content="Função"  Width="150" Height="25"/>
         <TextBox x:Name="funcao" Grid.Column="3" Grid.Row="5" Background="#FFD8D8D8" Width="300"/>
         <Button x:Name="voltar" Content="Voltar" Grid.Column="1" Grid.Row="7" Click="Voltar_Click"/>

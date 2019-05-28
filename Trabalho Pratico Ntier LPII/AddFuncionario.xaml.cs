@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using BLRestaurante;
 using BORestaurante;
-using BLRestaurante;
+using System;
+using System.Windows;
 
 namespace Trabalho_Pratico_Ntier_LPII
 {
@@ -40,5 +29,21 @@ namespace Trabalho_Pratico_Ntier_LPII
             main.Show();
             this.Close();
         }
+
+        private void Registar_Click(object sender, RoutedEventArgs e)
+        {
+            bool x = int.TryParse(funcao.Text, out int n);
+            bool z = int.TryParse(Tel.Text, out int tel);
+            if (x == true && z == true) 
+            {
+                bool y = ControloFunc.GetFuncao(n, out Funcao f);
+                if (y == true) ControloFunc.AddFunc(new Funcionario(Nome.Text, tel, f));
+                else MessageBox.Show("A função não existe!!!");
+            }
+            if (x == false) MessageBox.Show("Não é um numero!!!");
+            if (z == false) MessageBox.Show("Não é um numero de telefone!!!");
+        }
+
+        
     }
 }

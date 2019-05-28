@@ -120,7 +120,14 @@ namespace BDDadosRestaurante
             return false;
         }
 
-
+        /// <summary>
+        /// Numero de clientes
+        /// </summary>
+        /// <returns></returns>
+        public static int NumeroClientes()
+        {
+            return lista.Count;
+        }
 
         #endregion
     }

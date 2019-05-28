@@ -49,6 +49,14 @@ namespace BDDadosRestaurante
 
         }
 
+        /// <summary>
+        /// Numero de reservas
+        /// </summary>
+        /// <returns></returns>
+        public static int NumeroReservas()
+        {
+            return reser.Count;
+        }
 
         #endregion
     }

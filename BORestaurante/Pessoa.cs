@@ -69,7 +69,7 @@ namespace BORestaurante
         public override bool Equals(object obj)
         {
             Pessoa aux = (Pessoa)obj;
-            return this.Nome.CompareTo(aux.Nome) == 0 && this.tel == aux.tel;
+            return this.Nome.CompareTo(aux.Nome) == 0 || this.tel == aux.tel;
         }
 
         #endregion
