@@ -64,7 +64,14 @@ namespace BLRestaurante
             else return 0;
         }
 
+        public static List<Refeicao> GetRefeicoes()
+        {
+            return Refeicoes.GetRefeicaos();
+        }
 
-
+        public static string Nrefeicoes()
+        {
+            return Refeicoes.Nrefeicoes().ToString();
+        }
     }
 }

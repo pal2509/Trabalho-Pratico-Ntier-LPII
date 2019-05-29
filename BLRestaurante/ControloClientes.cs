@@ -77,6 +77,19 @@ namespace BLRestaurante
             return Clientes.ExisteCliente(n);
         }
 
+        /// <summary>
+        /// Lista de CLientes
+        /// </summary>
+        /// <returns></returns>
+        public static List<Cliente> GetClientes()
+        {
+            return Clientes.GetClientes();
+        }
+
+        public static string NClientes()
+        {
+            return Clientes.NumeroClientes().ToString();
+        }
 
         #region Dados
 
@@ -113,14 +126,7 @@ namespace BLRestaurante
         }
         #endregion
 
-        /// <summary>
-        /// Lista de CLientes
-        /// </summary>
-        /// <returns></returns>
-        public static List<Cliente>GetClientes()
-        {
-            return Clientes.GetClientes();
-        }
+
 
     }
 }

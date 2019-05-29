@@ -58,6 +58,18 @@
     <Compile Include="VerClientes.xaml.cs">
       <DependentUpon>VerClientes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VerEmenta.xaml.cs">
+      <DependentUpon>VerEmenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerFuncionarios.xaml.cs">
+      <DependentUpon>VerFuncionarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerRefeicoes.xaml.cs">
+      <DependentUpon>VerRefeicoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerReservas.xaml.cs">
+      <DependentUpon>VerReservas.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,6 +118,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="VerClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerEmenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerFuncionarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerRefeicoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerReservas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

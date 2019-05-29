@@ -45,7 +45,10 @@ namespace BDDadosRestaurante
             return false;
         }
 
-
+        public static int Nfunc()
+        {
+            return empregados.Count();
+        }
 
         #endregion
     }

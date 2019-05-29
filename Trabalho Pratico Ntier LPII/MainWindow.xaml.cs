@@ -85,5 +85,40 @@ namespace Trabalho_Pratico_Ntier_LPII
             add.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            VerClientes ver = new VerClientes();
+            ver.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            VerReservas ver = new VerReservas();
+            ver.Show();
+            this.Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            VerRefeicoes ver = new VerRefeicoes();
+            ver.Show();
+            this.Close();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            VerEmenta ver = new VerEmenta();
+            ver.Show();
+            this.Close();
+        }
+
+        private void VerFunc(object sender, RoutedEventArgs e)
+        {
+            VerFuncionarios ver = new VerFuncionarios();
+            ver.Show();
+            this.Close();
+        }
     }
 }

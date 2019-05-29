@@ -137,7 +137,7 @@ namespace BORestaurante
         {
             Refeicao aux = (Refeicao)obj;
 
-            if (hora.Hour.CompareTo(aux.hora.Hour) == 0 && hora.Minute.CompareTo(aux.hora.Minute) == 0 && hora.Second.CompareTo(aux.hora.Second) == 0 && numClient == aux.numClient)
+            if (hora.Hour.CompareTo(aux.hora.Hour) == 0 && hora.Minute.CompareTo(aux.hora.Minute) == 0 && numClient == aux.numClient)
             {
                 if (cod.ToArray().Length == aux.cod.ToArray().Length)
                 {

@@ -80,5 +80,15 @@ namespace BLRestaurante
             }
             return cont;
         }
+
+        public static List<Reserva> GetReservas()
+        {
+            return Reservas.GetReservas();
+        }
+
+        public static string NReservas()
+        {
+            return Reservas.NumeroReservas().ToString();
+        }
     }
 }

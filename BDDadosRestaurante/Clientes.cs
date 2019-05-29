@@ -16,6 +16,7 @@ namespace BDDadosRestaurante
         static List<Cliente> lista = new List<Cliente>();
         #endregion
 
+
         #region Propriedades
 
         public static List<Cliente> GetClientes()
@@ -129,6 +130,7 @@ namespace BDDadosRestaurante
             return lista.Count;
         }
 
+        
         #endregion
     }
 }

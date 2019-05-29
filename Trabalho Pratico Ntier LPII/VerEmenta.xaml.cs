@@ -11,22 +11,20 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using BORestaurante;
 using BLRestaurante;
-
 
 namespace Trabalho_Pratico_Ntier_LPII
 {
     /// <summary>
-    /// Interaction logic for VerClientes.xaml
+    /// Interaction logic for VerEmenta.xaml
     /// </summary>
-    public partial class VerClientes : Window
+    public partial class VerEmenta : Window
     {
-        public VerClientes()
+        public VerEmenta()
         {
             InitializeComponent();
-            clientes.ItemsSource = ControloClientes.GetClientes();
-            Nclientes.Text = ControloClientes.NClientes();
+            ementa.ItemsSource = ControloEmenta.GetEmenta();
+            NProdutos.Text = ControloEmenta.NProdutos();
         }
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
@@ -35,7 +33,5 @@ namespace Trabalho_Pratico_Ntier_LPII
             main.Show();
             this.Close();
         }
-
-
     }
 }

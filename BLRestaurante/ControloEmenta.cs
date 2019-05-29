@@ -60,5 +60,10 @@ namespace BLRestaurante
                 throw new Exception("Erro: ", e);
             }
         }
+
+        public static string NProdutos()
+        {
+            return Ementa.NumeroProdutos().ToString();
+        }
     }
 }

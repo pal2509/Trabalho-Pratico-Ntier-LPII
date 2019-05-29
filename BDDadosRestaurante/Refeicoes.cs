@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,7 +50,18 @@ namespace BDDadosRestaurante
 
         }
 
+        public static int Nrefeicoes()
+        {
+            return refeicoes.Count;
+        }
 
+        //public static List<> Gastoumais10()
+        //{
+        //    var list = from a in refeicoes
+        //               where a.Custo > 10
+        //               select a.Codigo;
+        //   return list.ToList() ;
+        //}
 
         #endregion
 

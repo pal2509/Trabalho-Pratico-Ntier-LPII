@@ -16,7 +16,7 @@ namespace Varios
         public int Compare(Reserva x, Reserva y)
         {
 
-            return DateTime.Compare(x.Horario, y.Horario);
+            return DateTime.Compare(x.Horario,y.Horario);
 
         }
     }

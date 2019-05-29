@@ -1,5 +1,6 @@
 ﻿using BDDadosRestaurante;
 using BORestaurante;
+using System.Collections.Generic;
 
 namespace BLRestaurante
 {
@@ -16,6 +17,16 @@ namespace BLRestaurante
             bool r = Funcionarios.AddFuncionario(f);
             if (r == true) return 1;
             else return 0;
+        }
+
+        public static string Nfuncionarios()
+        {
+            return Funcionarios.Nfunc().ToString();
+        }
+
+        public static List<Funcionario>GetFunc()
+        {
+            return Funcionarios.GetFuncionarios();
         }
 
 

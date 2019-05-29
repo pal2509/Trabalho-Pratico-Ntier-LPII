@@ -11,22 +11,20 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using BORestaurante;
 using BLRestaurante;
-
 
 namespace Trabalho_Pratico_Ntier_LPII
 {
     /// <summary>
-    /// Interaction logic for VerClientes.xaml
+    /// Interaction logic for VerRefeicoes.xaml
     /// </summary>
-    public partial class VerClientes : Window
+    public partial class VerRefeicoes : Window
     {
-        public VerClientes()
+        public VerRefeicoes()
         {
             InitializeComponent();
-            clientes.ItemsSource = ControloClientes.GetClientes();
-            Nclientes.Text = ControloClientes.NClientes();
+            refeicoes.ItemsSource = ControloRefeicoes.GetRefeicoes();
+            NRefeicoes.Text = ControloRefeicoes.Nrefeicoes();
         }
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
@@ -35,7 +33,5 @@ namespace Trabalho_Pratico_Ntier_LPII
             main.Show();
             this.Close();
         }
-
-
     }
 }

@@ -62,7 +62,12 @@ namespace Trabalho_Pratico_Ntier_LPII
             }
             bool y = ControloClientes.ExisteCliente(num);
 
-            if (a == true && y == true) ControloRefeicoes.AddRefeicao(new Refeicao(num, codigos));
+            if (a == true && y == true)
+            {
+                int k = ControloRefeicoes.AddRefeicao(new Refeicao(num, codigos));
+                if (k == 1) MessageBox.Show("Adicionada");
+                else MessageBox.Show("Já existe");
+            }
             else if (y == false) MessageBox.Show("O codigo do cliente não existe.");
             else MessageBox.Show("Codigos dos produtos errados");
         }
