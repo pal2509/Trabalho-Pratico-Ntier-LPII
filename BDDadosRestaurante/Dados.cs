@@ -34,7 +34,7 @@ namespace BDDadosRestaurante
                 }
                 if (File.Exists(Refeicoes.fileNameRefeicoes()))
                 {
-                    Refeicoes.GetListaRefeicoes(ReadRefeicoes(Refeicoes.fileNameRefeicoes()));
+                    Refeicoes.GetRefeicoes(ReadRefeicoes(Refeicoes.fileNameRefeicoes()));
                 }
                 if (File.Exists(Reservas.fileNameReservas()))
                 {
@@ -46,7 +46,7 @@ namespace BDDadosRestaurante
                 }
                 if (File.Exists(Clientes.fileNameRemovidos()))
                 {
-                    Clientes.GetListaClientes(ReadClientes(Clientes.fileNameRemovidos()));
+                    Clientes.GetRemovidos(ReadClientes(Clientes.fileNameRemovidos()));
                 }
                 return true;
             }
@@ -57,13 +57,17 @@ namespace BDDadosRestaurante
 
         }
 
+        /// <summary>
+        /// Guarda em ficheiro todos os dados do restaurante
+        /// </summary>
+        /// <returns></returns>
         public static bool Guardar()
         {
             try
             {
                 Save(Clientes.fileNameClientes(), Clientes.GetClientes());
                 Save(Ementa.fileNameEmenta(), Ementa.GetEmenta());
-                //Save(Refeicoes.fileNameRefeicoes(), Refeicoes.GetRefeicaos());
+                Save(Refeicoes.fileNameRefeicoes(), Refeicoes.GetRefeicoes());
                 Save(Reservas.fileNameReservas(), Reservas.GetReservas());
                 Save(Funcionarios.fileNameFuncionario(), Funcionarios.GetFuncionarios());
                 Save(Clientes.fileNameRemovidos(), Clientes.GetRemovidos());
@@ -131,14 +135,14 @@ namespace BDDadosRestaurante
         /// <param name="fileName">Nome do ficheiro</param>
         /// <param name="c">Lista</param>
         /// <returns></returns>
-        public static bool Save(string fileName, List<Refeicao> c)
+        public static bool Save(string fileName, Dictionary<int,List<Refeicao>> r)
         {
             try
             {
                 using (Stream str = File.Open(fileName, FileMode.Create))
                 {
                     BinaryFormatter bf = new BinaryFormatter();
-                    bf.Serialize(str, c);
+                    bf.Serialize(str, r);
                     str.Close();
                     return true;
                 }
@@ -226,17 +230,17 @@ namespace BDDadosRestaurante
         /// </summary>
         /// <param name="fileName">Nome do ficheiro</param>
         /// <returns></returns>
-        public static List<Refeicao> ReadRefeicoes(string fileName)
+        public static Dictionary<int,List<Refeicao>> ReadRefeicoes(string fileName)
         {
             try
             {
                 if (File.Exists(fileName))
                 {
-                    List<Refeicao> c;
+                    Dictionary<int, List<Refeicao>> c;
                     using (Stream str = File.OpenRead(fileName))
                     {
                         BinaryFormatter bf = new BinaryFormatter();
-                        c = (List<Refeicao>)bf.Deserialize(str);
+                        c = (Dictionary<int, List<Refeicao>>)bf.Deserialize(str);
                     }
                     return c;
                 }

@@ -23,7 +23,7 @@ namespace Trabalho_Pratico_Ntier_LPII
         public VerRefeicoes()
         {
             InitializeComponent();
-            refeicoes.ItemsSource = ControloRefeicoes.GetRefeicoes();
+            refeicoes.ItemsSource = ControloRefeicoes.GetListRefeicoes();
             NRefeicoes.Text = ControloRefeicoes.Nrefeicoes();
         }
 

@@ -11,9 +11,10 @@ namespace BDDadosRestaurante
     public class Reservas
     {
         #region Atributos
-        const string fileReservas = "Reservas.bin";
+        const string FILERESERVAS = "Reservas.bin";
         static List<Reserva> reser = new List<Reserva>();
         #endregion
+
 
         public static List<Reserva>GetReservas()
         {
@@ -27,7 +28,7 @@ namespace BDDadosRestaurante
 
         public static string fileNameReservas()
         {
-            return fileReservas;
+            return FILERESERVAS;
         }
 
         #region Metodos

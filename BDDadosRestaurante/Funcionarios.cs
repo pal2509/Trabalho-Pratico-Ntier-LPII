@@ -9,7 +9,7 @@ namespace BDDadosRestaurante
 {
     public class Funcionarios
     {
-        const string fileEmpregados = "Empregados.bin";
+        const string FILEEMPREGADOS = "Empregados.bin";
         static List<Funcionario> empregados = new List<Funcionario>();
 
         public static List<Funcionario>GetFuncionarios()
@@ -24,7 +24,7 @@ namespace BDDadosRestaurante
 
         public static string fileNameFuncionario()
         {
-            return fileEmpregados;
+            return FILEEMPREGADOS;
         }
 
         #region Metodos
@@ -45,6 +45,10 @@ namespace BDDadosRestaurante
             return false;
         }
 
+        /// <summary>
+        /// Conta o numero de empregados
+        /// </summary>
+        /// <returns>Numero de empregados</returns>
         public static int Nfunc()
         {
             return empregados.Count();

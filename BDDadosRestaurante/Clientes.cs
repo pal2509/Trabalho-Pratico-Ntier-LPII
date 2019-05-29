@@ -12,7 +12,7 @@ namespace BDDadosRestaurante
     public class Clientes
     {
         #region Atributos
-        const string fileClientes = "Clientes.bin";
+        const string FILECLIENTES = "Clientes.bin";
         static List<Cliente> lista = new List<Cliente>();
         static List<Cliente> removidos = new List<Cliente>();
         const string fileRemovidos = "ClientesRemovidos.bin";
@@ -33,7 +33,7 @@ namespace BDDadosRestaurante
 
         public static string fileNameClientes()
         {
-            return fileClientes;
+            return FILECLIENTES;
         }
 
         public static List<Cliente> GetRemovidos()

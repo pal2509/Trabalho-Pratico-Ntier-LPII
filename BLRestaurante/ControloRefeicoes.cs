@@ -15,8 +15,8 @@ namespace BLRestaurante
         public static int AddRefeicao(Refeicao r)
         {
             r.Custo = CalculaCusto(r.Codigo.ToArray());
-            bool x = Refeicoes.AddReficao(r);
-            if (x == true) return 1;
+            int x = Refeicoes.AddRef(r);
+            if (x == 1) return 1;
             else return 0;
         }
 
@@ -66,12 +66,33 @@ namespace BLRestaurante
 
         public static Dictionary<int, List<Refeicao>> GetRefeicoes()
         {
-            return Refeicoes.GetRefeicaos();
+            return Refeicoes.GetRefeicoes();
         }
 
+        public static List<Refeicao> GetListRefeicoes()
+        {
+            List<Refeicao> list = new List<Refeicao>();
+            Dictionary<int, List<Refeicao>> dictionary = Refeicoes.GetRefeicoes();
+
+            foreach(int a in dictionary.Keys)
+            {
+                foreach(Refeicao r in dictionary[a])
+                {
+                    list.Add(r);
+                }
+            }
+            return list;
+
+
+        }
+
+        /// <summary>
+        /// Numero total de refieções1
+        /// </summary>
+        /// <returns></returns>
         public static string Nrefeicoes()
         {
-            return Refeicoes.Nrefeicoes().ToString();
+            return GetListRefeicoes().Count.ToString();
         }
     }
 }

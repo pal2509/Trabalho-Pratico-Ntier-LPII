@@ -11,12 +11,17 @@ namespace BDDadosRestaurante
     public class Refeicoes
     {
         #region Atributos
-        const string fileRefeicoes = "Refeicoes.bin";
-        static List<Refeicao> refeicoes = new List<Refeicao>();
+        const string FILEREFEICOES = "Refeicoes.bin";
+        //static List<Refeicao> refeicoes = new List<Refeicao>();
         static Dictionary<int, List<Refeicao>> refei = new Dictionary<int, List<Refeicao>>();
 
         #endregion
-
+        
+        /// <summary>
+        /// Adiciona uma refeição á lista de refeições
+        /// </summary>
+        /// <param name="r">Refeição</param>
+        /// <returns>-1-Cliente não existe,1-Adicionou,0-Já existe um igual</returns>
         public static int AddRef(Refeicao r)
         {
             if (r.Cliente != -1)
@@ -40,49 +45,35 @@ namespace BDDadosRestaurante
             else return -1;
         }
 
-        public static Dictionary<int,List<Refeicao>> GetRefeicaos()
+
+        public static Dictionary<int,List<Refeicao>> GetRefeicoes()
         {
             return refei;
         }
-        public static void GetListaRefeicoes(List<Refeicao> c)
+
+        public static void GetRefeicoes(Dictionary<int, List<Refeicao>> r)
         {
-            refeicoes = c;
+            refei = r;
         }
 
         public static string fileNameRefeicoes()
         {
-            return fileRefeicoes;
+            return FILEREFEICOES;
         }
 
-        #region Metodos
         /// <summary>
-        /// Adiciona uma refeiçao 
+        /// Retorna uma lista de refeições de um dado cliente
         /// </summary>
-        /// <param name="x">Refeição</param>
-        /// <returns>true se adicionar e false se nao adicionar</returns>
-        public static bool AddReficao(Refeicao x)
+        /// <param name="n">Numero do cliente</param>
+        /// <returns>List<Refeicao> ou null se a chave nao existe</returns>
+        public static List<Refeicao>ListaRefeicoesCliente(int n)
         {
-            if (x.Cliente == -1) return false;
-            else
+            if (refei.ContainsKey(n))
             {
-                if (refeicoes.Contains(x) == false)
-                {           
-                    refeicoes.Add(x);
-                    return true;
-                }
-                else return false;
+                return refei[n];
             }
-
+            else return null;
         }
-
-        public static int Nrefeicoes()
-        {
-            return refeicoes.Count;
-        }
-
-
-
-        #endregion
 
     }
 }

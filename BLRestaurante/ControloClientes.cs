@@ -52,19 +52,18 @@ namespace BLRestaurante
         /// Calcula o dinheiro gasto de um dado cliente 
         /// </summary>
         /// <param name="n">Numero do cliente</param>
-        /// <returns>Total do dinheiro gasto</returns>
-        //public static double TotalGastoCliente(int n)
-        //{
-     
-        //        double soma = 0;
-        //        Refeicao[] x = Refeicoes.GetRefeicaos().ToArray();
-        //        for (int i = 0; i < x.Length; i++)
-        //        {
-        //            if (n == x[i].Cliente) soma = soma + x[i].Custo;
-        //        }
-        //        return soma;
-    
-        //}
+        /// <returns>Total do dinheiro gasto,-1 se nao existe refeições</returns>
+        public static double TotalGastoCliente(int n)
+        {
+
+            if (Refeicoes.GetRefeicoes().ContainsKey(n))
+            {
+                double soma = 0;
+                foreach (Refeicao r in Refeicoes.ListaRefeicoesCliente(n)) soma = soma + r.Custo;
+                return soma;
+            }
+            else return -1;
+        }
 
 
         /// <summary>

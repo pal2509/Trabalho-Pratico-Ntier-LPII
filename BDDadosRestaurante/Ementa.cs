@@ -12,7 +12,7 @@ namespace BDDadosRestaurante
     {
         #region Atributos
         static List<Produto> ementa = new List<Produto>();
-        const string fileEmenta = "Ementa.bin";
+        const string FILEEMENTA = "Ementa.bin";
         #endregion
 
 
@@ -28,7 +28,7 @@ namespace BDDadosRestaurante
 
         public static string fileNameEmenta()
         {
-            return fileEmenta;
+            return FILEEMENTA;
         }
 
         #region Metodos
