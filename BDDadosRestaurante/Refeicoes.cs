@@ -13,11 +13,36 @@ namespace BDDadosRestaurante
         #region Atributos
         const string fileRefeicoes = "Refeicoes.bin";
         static List<Refeicao> refeicoes = new List<Refeicao>();
+        static Dictionary<int, List<Refeicao>> refei = new Dictionary<int, List<Refeicao>>();
+
         #endregion
 
-        public static List<Refeicao>GetRefeicaos()
+        public static int AddRef(Refeicao r)
         {
-            return refeicoes;
+            if (r.Cliente != -1)
+            {
+                if (refei.ContainsKey(r.Cliente))
+                {
+                    if (refei[r.Cliente].Contains(r) == false)
+                    {
+                        refei[r.Cliente].Add(r);
+                        return 1;
+                    }
+                    else return 0;
+                }
+                else
+                {
+                    refei.Add(r.Cliente, new List<Refeicao>());
+                    refei[r.Cliente].Add(r);
+                    return 1;
+                }
+            }
+            else return -1;
+        }
+
+        public static Dictionary<int,List<Refeicao>> GetRefeicaos()
+        {
+            return refei;
         }
         public static void GetListaRefeicoes(List<Refeicao> c)
         {
@@ -55,13 +80,7 @@ namespace BDDadosRestaurante
             return refeicoes.Count;
         }
 
-        //public static List<> Gastoumais10()
-        //{
-        //    var list = from a in refeicoes
-        //               where a.Custo > 10
-        //               select a.Codigo;
-        //   return list.ToList() ;
-        //}
+
 
         #endregion
 

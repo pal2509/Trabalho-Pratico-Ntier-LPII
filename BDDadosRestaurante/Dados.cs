@@ -44,6 +44,10 @@ namespace BDDadosRestaurante
                 {
                     Funcionarios.GetListaFuncionario(ReadFuncionario(Funcionarios.fileNameFuncionario()));
                 }
+                if (File.Exists(Clientes.fileNameRemovidos()))
+                {
+                    Clientes.GetListaClientes(ReadClientes(Clientes.fileNameRemovidos()));
+                }
                 return true;
             }
             catch (Exception e)
@@ -59,9 +63,10 @@ namespace BDDadosRestaurante
             {
                 Save(Clientes.fileNameClientes(), Clientes.GetClientes());
                 Save(Ementa.fileNameEmenta(), Ementa.GetEmenta());
-                Save(Refeicoes.fileNameRefeicoes(), Refeicoes.GetRefeicaos());
+                //Save(Refeicoes.fileNameRefeicoes(), Refeicoes.GetRefeicaos());
                 Save(Reservas.fileNameReservas(), Reservas.GetReservas());
                 Save(Funcionarios.fileNameFuncionario(), Funcionarios.GetFuncionarios());
+                Save(Clientes.fileNameRemovidos(), Clientes.GetRemovidos());
                 return true;
 
             }
@@ -330,6 +335,7 @@ namespace BDDadosRestaurante
                 throw new Exception("ERRO:Nao foi possivel ler o ficheiro!!!-", e);
             }
         }
+
     }
 }
 

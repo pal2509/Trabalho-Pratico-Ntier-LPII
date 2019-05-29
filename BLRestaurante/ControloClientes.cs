@@ -53,18 +53,18 @@ namespace BLRestaurante
         /// </summary>
         /// <param name="n">Numero do cliente</param>
         /// <returns>Total do dinheiro gasto</returns>
-        public static double TotalGastoCliente(int n)
-        {
+        //public static double TotalGastoCliente(int n)
+        //{
      
-                double soma = 0;
-                Refeicao[] x = Refeicoes.GetRefeicaos().ToArray();
-                for (int i = 0; i < x.Length; i++)
-                {
-                    if (n == x[i].Cliente) soma = soma + x[i].Custo;
-                }
-                return soma;
+        //        double soma = 0;
+        //        Refeicao[] x = Refeicoes.GetRefeicaos().ToArray();
+        //        for (int i = 0; i < x.Length; i++)
+        //        {
+        //            if (n == x[i].Cliente) soma = soma + x[i].Custo;
+        //        }
+        //        return soma;
     
-        }
+        //}
 
 
         /// <summary>

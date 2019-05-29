@@ -14,6 +14,8 @@ namespace BDDadosRestaurante
         #region Atributos
         const string fileClientes = "Clientes.bin";
         static List<Cliente> lista = new List<Cliente>();
+        static List<Cliente> removidos = new List<Cliente>();
+        const string fileRemovidos = "ClientesRemovidos.bin";
         #endregion
 
 
@@ -34,7 +36,20 @@ namespace BDDadosRestaurante
             return fileClientes;
         }
 
-        
+        public static List<Cliente> GetRemovidos()
+        {
+            return removidos;
+        }
+
+        public static void GetRemovidos(List<Cliente> c)
+        {
+            removidos = c;
+        }
+
+        public static string fileNameRemovidos()
+        {
+            return fileRemovidos;
+        }
         #endregion
 
         #region Metodos
@@ -130,7 +145,23 @@ namespace BDDadosRestaurante
             return lista.Count;
         }
 
-        
+        /// <summary>
+        /// Remove um cliente e passa-o para uma lista secundaria
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static bool RemoveCliente(int n)
+        {
+            if (ExisteCliente(n))
+            {
+                var item = lista.Single(c => c.numCli == n);
+                removidos.Add(item);
+                lista.Remove(item);
+                return true;
+            }
+            else return false;
+        }
+
         #endregion
     }
 }

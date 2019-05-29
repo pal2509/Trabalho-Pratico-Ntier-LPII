@@ -45,26 +45,26 @@ namespace BLRestaurante
         /// Calcula a media do custo de todas as refeições do restaurante
         /// </summary>
         /// <returns></returns>
-        public double MediaCustoRefeicoes()
-        {
-            int cont = 0;
-            double soma = 0;
-            foreach (Refeicao r in Refeicoes.GetRefeicaos())
-            {
-                if (r.Custo > 0)
-                {
-                    soma = soma + r.Custo;
-                    cont++;
-                }
-            }
-            if (cont != 0)
-            {
-                return soma / cont;
-            }
-            else return 0;
-        }
+        //public double MediaCustoRefeicoes()
+        //{
+        //    int cont = 0;
+        //    double soma = 0;
+        //    foreach (Refeicao r in Refeicoes.GetRefeicaos())
+        //    {
+        //        if (r.Custo > 0)
+        //        {
+        //            soma = soma + r.Custo;
+        //            cont++;
+        //        }
+        //    }
+        //    if (cont != 0)
+        //    {
+        //        return soma / cont;
+        //    }
+        //    else return 0;
+        //}
 
-        public static List<Refeicao> GetRefeicoes()
+        public static Dictionary<int, List<Refeicao>> GetRefeicoes()
         {
             return Refeicoes.GetRefeicaos();
         }
