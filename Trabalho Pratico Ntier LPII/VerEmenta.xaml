@@ -37,7 +37,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <DataGrid x:Name="ementa" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7" Height="250" Width="400" Background="White" VerticalScrollBarVisibility="Visible" AlternatingRowBackground="#FFD8D8D8" >
+        <DataGrid x:Name="ementa" Grid.Column="1" SelectionUnit="Cell" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7" Height="250" Width="400" Background="White" VerticalScrollBarVisibility="Visible" AlternatingRowBackground="#FFD8D8D8" >
 
         </DataGrid>
 

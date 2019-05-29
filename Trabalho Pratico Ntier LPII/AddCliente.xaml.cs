@@ -44,18 +44,26 @@ namespace Trabalho_Pratico_Ntier_LPII
 
         private void Registar_Click(object sender, RoutedEventArgs e)
         {
-            string nome = (string)NomeCli.Text;
-            bool x = int.TryParse(TelCli.Text, out int tel);
-            if (x)
+            try
             {
-                int n = ControloClientes.AddCliente(new Cliente(nome, tel));
-                if (n == 1) MessageBox.Show("Adicionado com sucesso!!!");
-                else MessageBox.Show("Cliente já registado.");
+                string nome = (string)NomeCli.Text;
+                bool x = int.TryParse(TelCli.Text, out int tel);
+                if (x)
+                {
+                    int n = ControloClientes.AddCliente(new Cliente(nome, tel));
+                    if (n == 1) MessageBox.Show("Adicionado com sucesso!!!");
+                    else MessageBox.Show("Cliente já registado.");
+                }
+                else
+                {
+                    MessageBox.Show("Não é um numero de telefone/telemóvel!!!");
+                }
             }
-            else
+            catch (Exception t)
             {
-                MessageBox.Show("Não é um numero de telefone/telemóvel!!!");
-            }  
+                MessageBox.Show(string.Format("{0}", t));
+            }
+
         }
     }
 }

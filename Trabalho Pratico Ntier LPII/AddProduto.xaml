@@ -35,8 +35,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <Label Grid.Column="1" Grid.Row="1" Content="Codigo do produto"  Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="cod" Grid.Column="4" Grid.Row="1" Background="#FFD8D8D8" Width="300"/>
+        
         <Label Grid.Column="1" Grid.Row="3" Content="Nome" Width="200" Height="30" Grid.ColumnSpan="2"/>
         <TextBox x:Name="nome" Grid.Column="4" Grid.Row="3" Background="#FFD8D8D8" Width="300"/>
         <Label Grid.Column="1" Grid.Row="5" Content="Preço" Width="200" Height="30" Grid.ColumnSpan="2"/>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BORestaurante;
+using Varios;
 
 namespace BDDadosRestaurante
 {
@@ -41,6 +42,7 @@ namespace BDDadosRestaurante
         {
             if (ementa.Contains(x) == false)
             {
+                x.Cod = Varios.Varios.GeraInt100();
                 ementa.Add(x);
                 return true;
             }

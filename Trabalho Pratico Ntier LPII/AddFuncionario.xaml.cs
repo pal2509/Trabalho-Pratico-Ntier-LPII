@@ -32,16 +32,27 @@ namespace Trabalho_Pratico_Ntier_LPII
 
         private void Registar_Click(object sender, RoutedEventArgs e)
         {
-            bool x = int.TryParse(funcao.Text, out int n);
+            try
+            {
+                bool x = int.TryParse(funcao.Text, out int n);
             bool z = int.TryParse(Tel.Text, out int tel);
             if (x == true && z == true) 
             {
                 bool y = ControloFunc.GetFuncao(n, out Funcao f);
-                if (y == true) ControloFunc.AddFunc(new Funcionario(Nome.Text, tel, f));
+                if (y == true)
+                {
+                    ControloFunc.AddFunc(new Funcionario(Nome.Text, tel, f));
+                    MessageBox.Show("Adicionado com sucesso");
+                }
                 else MessageBox.Show("A função não existe!!!");
             }
             if (x == false) MessageBox.Show("Não é um numero!!!");
             if (z == false) MessageBox.Show("Não é um numero de telefone!!!");
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(string.Format("{0}", t));
+            }
         }
 
         

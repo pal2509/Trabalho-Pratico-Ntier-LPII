@@ -39,6 +39,17 @@ namespace BORestaurante
             this.preco = preco;
         }
 
+        /// <summary>
+        /// Construtor de um produto
+        /// </summary>
+        /// <param name="nome">Nome do produto</param>
+        /// <param name="preco">Preço do produto</param>
+        public Produto(string nome, double preco)
+        {
+            this.nome = nome;
+            this.cod = -1;
+            this.preco = preco;
+        }
         #endregion
 
         #region Propriedades
@@ -94,7 +105,7 @@ namespace BORestaurante
         public override bool Equals(object obj)
         {
             Produto aux = (Produto)obj;
-            return this.cod == aux.cod || this.nome.CompareTo(aux.nome) == 0;
+            return this.cod == aux.cod || this.nome.CompareTo(aux.nome) == 0 && preco == aux.preco;
         }
 
         #endregion

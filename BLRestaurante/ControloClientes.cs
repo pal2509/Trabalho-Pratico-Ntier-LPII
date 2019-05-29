@@ -90,6 +90,21 @@ namespace BLRestaurante
             return Clientes.NumeroClientes().ToString();
         }
 
+        /// <summary>
+        /// Remove um cliente do restaurante
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static bool RemoveCliente(int n)
+        {
+            if (Clientes.ExisteCliente(n))
+            {
+                Clientes.RemoveCliente(n);
+                return true;
+            }
+            else return false;
+        }
+
         #region Dados
 
         /// <summary>

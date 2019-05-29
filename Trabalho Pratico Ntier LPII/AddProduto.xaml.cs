@@ -47,7 +47,7 @@ namespace Trabalho_Pratico_Ntier_LPII
         {
             try
             {
-                int x = ControloEmenta.CriaEmenta(cod.Text, nome.Text, preco.Text, out Produto r);
+                int x = ControloEmenta.CriaEmenta( nome.Text, preco.Text, out Produto r);
                 if (x == 1)
                 {
                     int n = ControloEmenta.AddProduto(r);
@@ -55,7 +55,7 @@ namespace Trabalho_Pratico_Ntier_LPII
                     else MessageBox.Show("Já existe um produto igual");
                     
                 }
-                if (x == -1) MessageBox.Show("Não é um codigo válido!!!");
+                
                 if (x == -2) MessageBox.Show("Não é um preço válido!!!");
                 
             }

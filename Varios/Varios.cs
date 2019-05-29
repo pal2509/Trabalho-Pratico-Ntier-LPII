@@ -33,5 +33,15 @@ namespace Varios
             int n = rng.Next(1000, 10000);
             return n;
         }
+        /// <summary>
+        /// Gera um numrero interio positivo entre 10 e 100
+        /// </summary>
+        /// <returns>Retorna o numero gerado</returns>
+        public static int GeraInt100()
+        {
+            Random rng = new Random();
+            int n = rng.Next(10, 100);
+            return n;
+        }
     }
 }

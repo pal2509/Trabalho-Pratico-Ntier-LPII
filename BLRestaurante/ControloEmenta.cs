@@ -38,20 +38,19 @@ namespace BLRestaurante
         /// <param name="npessoas">srintf numero de pessoas</param>
         /// <param name="data">string data</param>
         /// <param name="r">out Reserva</param>
-        /// <returns>1-Converteu,-1-codigo errado,-2-preco errado</returns>
-        public static int CriaEmenta(string codigo, string nome, string preco, out Produto r)
+        /// <returns>1-Converteu,-2-preco errado</returns>
+        public static int CriaEmenta(string nome, string preco, out Produto r)
         {
             try
             {
-                bool y = int.TryParse(codigo, out int cod);
+               
                 bool x = double.TryParse(preco, out double prec);
-                if (y == true && x == true)
+                if (x == true)
                 {
-                    r = new Produto(nome, cod, prec);
+                    r = new Produto(nome, prec);
                     return 1;
                 }
                 else r = new Produto();
-                if (y == false) return -1;
                 if (x == false) return -2;
                 return 0;
             }
