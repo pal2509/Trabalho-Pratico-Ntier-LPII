@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * Autor:Paulo Meneses
+ * Numero:17611
+ * Trabalho Prático de linguagem de programação 2
+ */
 using BORestaurante;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BDDadosRestaurante
 {
@@ -15,7 +17,7 @@ namespace BDDadosRestaurante
         const string FILECLIENTES = "Clientes.bin";
         static List<Cliente> lista = new List<Cliente>();
         static List<Cliente> removidos = new List<Cliente>();
-        const string fileRemovidos = "ClientesRemovidos.bin";
+        const string FILEREMOVIDOS = "ClientesRemovidos.bin";
         #endregion
 
 
@@ -48,7 +50,7 @@ namespace BDDadosRestaurante
 
         public static string fileNameRemovidos()
         {
-            return fileRemovidos;
+            return FILEREMOVIDOS;
         }
         #endregion
 

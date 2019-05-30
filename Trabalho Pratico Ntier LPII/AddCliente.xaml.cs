@@ -1,19 +1,13 @@
-﻿using BLRestaurante;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿/*
+ * Autor:Paulo Meneses
+ * Numero:17611
+ * Trabalho Prático de linguagem de programação 2
+ */
+
+using BLRestaurante;
 using BORestaurante;
+using System;
+using System.Windows;
 
 namespace Trabalho_Pratico_Ntier_LPII
 {
@@ -25,6 +19,7 @@ namespace Trabalho_Pratico_Ntier_LPII
         public AddCliente()
         {
             InitializeComponent();
+            clientes.ItemsSource = ControloClientes.GetClientes();
         }
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
@@ -63,6 +58,19 @@ namespace Trabalho_Pratico_Ntier_LPII
             {
                 MessageBox.Show(string.Format("{0}", t));
             }
+
+        }
+
+        private void Remover_Click(object sender, RoutedEventArgs e)
+        {
+            bool x = int.TryParse(CodRemove.Text, out int cod);
+            if (x == true)
+            {
+                bool y = ControloClientes.RemoveCliente(cod);
+                if (y == true) MessageBox.Show("Removido com sucesso.");
+                else MessageBox.Show("Cliente não existe");
+            }
+            else MessageBox.Show("Não é um codigo!!!");
 
         }
     }

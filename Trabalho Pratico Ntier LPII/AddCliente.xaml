@@ -42,9 +42,12 @@
         <TextBox x:Name="TelCli" Grid.Column="3" Grid.Row="3" Background="#FFD8D8D8" Width="300"/>
         <Button x:Name="voltar" Content="Voltar" Grid.Column="1" Grid.Row="7" Click="Voltar_Click"/>
         <Button x:Name="Registar" Content="Registar" Grid.Column="3" Grid.Row="7" Click="Registar_Click"/>
-        
+        <Label Grid.Column="1" Grid.Row="9" Content="Codigo para remover" Width="150" Height="30"/>
+        <TextBox x:Name="CodRemove" Grid.Column="3" Grid.Row="9" Background="#FFD8D8D8" Width="300"/>
+        <Button x:Name="remover" Content="Remover" Grid.Column="3" Grid.Row="11" Click="Remover_Click"/>
+        <DataGrid x:Name="clientes" SelectionUnit="Cell" IsReadOnly="True" Grid.Column="1" Grid.Row="13" Grid.ColumnSpan="3" Grid.RowSpan="5" Height="200" Background="White" VerticalScrollBarVisibility="Visible" AlternatingRowBackground="#FFD8D8D8" >
 
-
+        </DataGrid>
 
     </Grid>
 </Window>

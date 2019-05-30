@@ -1,12 +1,15 @@
-﻿using System;
+﻿/*
+ * Autor:Paulo Meneses
+ * Numero:17611
+ * Trabalho Prático de linguagem de programação 2
+ * Classe para guardar dados em ficheiro
+ */
+using BORestaurante;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
-using BORestaurante;
-using Varios;
+
 
 namespace BDDadosRestaurante
 {

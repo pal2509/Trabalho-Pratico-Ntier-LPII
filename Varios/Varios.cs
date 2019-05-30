@@ -1,9 +1,13 @@
-﻿using System;
+﻿/*
+ * Autor:Paulo Meneses
+ * Numero:17611
+ * Trabalho Prático de linguagem de programação 2
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using BORestaurante;
 
 namespace Varios

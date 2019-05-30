@@ -1,4 +1,9 @@
-﻿using BLRestaurante;
+﻿/*
+ * Autor:Paulo Meneses
+ * Numero:17611
+ * Trabalho Prático de linguagem de programação 2
+ */
+using BLRestaurante;
 using BORestaurante;
 using System;
 using System.Windows;

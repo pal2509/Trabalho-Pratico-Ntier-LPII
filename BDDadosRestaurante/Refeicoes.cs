@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Autor:Paulo Meneses
+ * Numero:17611
+ * Trabalho Prático de linguagem de programação 2
+ */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;

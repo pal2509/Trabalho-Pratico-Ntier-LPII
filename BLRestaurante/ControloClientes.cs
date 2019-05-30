@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BORestaurante;
+﻿/*
+ * Autor:Paulo Meneses
+ * Numero:17611
+ * Trabalho Prático de linguagem de programação 2
+ */
 using BDDadosRestaurante;
-using Varios;
+using BORestaurante;
+using System;
+using System.Collections.Generic;
 
 namespace BLRestaurante
 {
