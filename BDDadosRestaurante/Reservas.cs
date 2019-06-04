@@ -64,6 +64,18 @@ namespace BDDadosRestaurante
             return reser.Count;
         }
 
+        /// <summary>
+        /// Verifica se uma reserva existe numa dada com aquele numero de telefone
+        /// </summary>
+        /// <param name="date">Data</param>
+        /// <param name="tel">Numero de telefone</param>
+        /// <returns></returns>
+        public static bool ExisteReserva(DateTime date,int tel)
+        {
+            if (reser.Contains(new Reserva(date, tel), new ReservaComparer())) return true;
+            else return false;
+        }
+
         #endregion
     }
 }

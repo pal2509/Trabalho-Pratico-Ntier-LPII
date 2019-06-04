@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BORestaurante
 {
@@ -38,6 +39,16 @@ namespace BORestaurante
         public Funcionario(string nome, int tel, Funcao funcao) : base(nome, tel)
         {
             this.funcao = funcao;
+        }
+
+        /// <summary>
+        /// Construtor que so recebe o codigo do empregado
+        /// </summary>
+        /// <param name="cod"></param>
+        public Funcionario(int cod):base()
+        {
+            numEmpregado = cod;
+            funcao = 0;
         }
 
         #endregion
@@ -99,5 +110,21 @@ namespace BORestaurante
         }
         #endregion
 
+    }
+
+    public class FuncionarioComparer : IEqualityComparer<Funcionario>
+    {
+        public bool Equals(Funcionario x, Funcionario y)
+        {
+            if (x.Empregado.CompareTo(y.Empregado) == 0) return true;
+            else return false;
+        }
+
+        public int GetHashCode(Funcionario obj)
+        {
+            if (Object.ReferenceEquals(obj, null)) return 0;
+            int hashFuncCode = obj.Empregado.GetHashCode();
+            return hashFuncCode % 10;
+        }
     }
 }

@@ -67,6 +67,12 @@ namespace BLRestaurante
             return false;
         }
 
+        public static Funcionario ProcuraFuncionario(int cod)
+        {
+            if(Funcionarios.ExisteFuncionario(cod))Funcionarios.
+        }
+
+
         /// <summary>
         /// Gera um numero de funcionario único
         /// </summary>

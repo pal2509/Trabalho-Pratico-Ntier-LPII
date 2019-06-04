@@ -59,6 +59,34 @@ namespace BDDadosRestaurante
             return empregados.Count();
         }
 
+        /// <summary>
+        /// Verifica se um funcionario existe através do codigo de funcionario
+        /// </summary>
+        /// <param name="cod"></param>
+        /// <returns></returns>
+        public static bool ExisteFuncionario(int cod)
+        {
+            return empregados.Contains(new Funcionario(cod), new FuncionarioComparer());
+        }
+
+        /// <summary>
+        /// Procura por um funcionario na lista de funcionarios
+        /// </summary>
+        /// <param name="cod"></param>
+        /// <returns></returns>
+        public static Funcionario ProcuraFuncionario(int cod)
+        {
+            if (ExisteFuncionario(cod))
+            {
+                var f = from x in empregados
+                        where x.Empregado == cod
+                        select x;
+                return (Funcionario)f;
+            }
+            else return null;
+        }
+
+
         #endregion
     }
 }

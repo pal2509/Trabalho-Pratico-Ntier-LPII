@@ -32,6 +32,17 @@ namespace BORestaurante
             horario = h;
         }
 
+        /// <summary>
+        /// Recebe a data e o numero de telefone
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="tel"></param>
+        public Reserva(DateTime date,int tel)
+        {
+            this.horario = date;
+            this.tel = tel;
+            numPessoas = -1;
+        }
 
         /// <summary>
         /// Construtor vazio
@@ -84,4 +95,22 @@ namespace BORestaurante
 
         #endregion
     }
+
+    public class ReservaComparer : IEqualityComparer<Reserva>
+    {
+        public bool Equals(Reserva x, Reserva y)
+        {
+            if (DateTime.Compare(x.Horario, y.Horario) == 0 && x.Telefone == y.Telefone) return true;
+            else return false;
+        }
+
+        public int GetHashCode(Reserva obj)
+        {
+            if (Object.ReferenceEquals(obj, null)) return 0;
+            int hashReservaDate = obj.Horario.GetHashCode();
+            int hashRevervaTel = obj.Telefone.GetHashCode();
+            return hashReservaDate*hashRevervaTel;
+        }
+    }
+
 }

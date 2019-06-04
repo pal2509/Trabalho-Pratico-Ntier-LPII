@@ -31,6 +31,12 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="8" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="8" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="8" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="8" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
@@ -42,6 +48,11 @@
         <TextBox x:Name="funcao" Grid.Column="3" Grid.Row="5" Background="#FFD8D8D8" Width="300"/>
         <Button x:Name="voltar" Content="Voltar" Grid.Column="1" Grid.Row="7" Click="Voltar_Click"/>
         <Button x:Name="Registar" Content="Registar" Grid.Column="3" Grid.Row="7" Click="Registar_Click"/>
-        
+        <Label Grid.Column="1" Grid.Row="9" Content="Funções:"  Width="150" Height="28"/>
+        <Label Grid.Column="1" Grid.Row="11" Content="0-Cozinherio"  Width="150" Height="28"/>
+        <Label Grid.Column="1" Grid.Row="13" Content="2-Ajudante de cozinha"  Width="150" Height="28"/>
+        <Label Grid.Column="3" Grid.Row="11" Content="1-Empregado de Mesa"  Width="150" Height="28"/>
+        <Label Grid.Column="3" Grid.Row="13" Content="3-Balcão"  Width="150" Height="28"/>
+        <Label Grid.Column="1" Grid.Row="15" Content="4-Gerente"  Width="150" Height="28"/>
     </Grid>
 </Window>
